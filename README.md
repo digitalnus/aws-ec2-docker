@@ -15,10 +15,13 @@ sudo yum update -y
 sudo yum install docker -y
 service docker start
 docker -v
+
+#
+# Install git
+#
+sudo yum install git -y
+
+mkdir -p /home/ec2-user/repo
+cd ~/home/ec2-user/repo
+git clone https://github.com/digitalnus/aws-ec2-docker.git
 ```
-
-# Installation of Git
-
-# Clone Dockerfile
-
-> *git clone *
