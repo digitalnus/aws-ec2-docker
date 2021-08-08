@@ -5,10 +5,18 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: List files and print current directory
+      - name: Before checkout
         run: |
+          echo "Before checking out from repo ... "
           pwd
-          ls 
+          ls -a  
+      - name: Uses actions/checkout
+        uses: actions/checkout@v1
+      - name: After Checkout
+        run: |
+          echo "After checking out from repo ... "
+          pwd
+          ls -a
       - name: Simple Javascript Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
