@@ -3,6 +3,15 @@ name: Shell Commands
 on: [push]
 
 jobs:
+  run-windows-commands:
+    runs-on: windows-latest
+    steps:
+      - name: Step 1 - Print current directory using Powershell
+        run: Get-Location
+      - name: Step 2 - Using bash shell in Windows
+        run: pwd
+        shell: bash
+
   run-shell-commands:
     runs-on: ubuntu-latest
     steps:
